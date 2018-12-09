@@ -6,4 +6,10 @@ router.get('/', function (req, res, next) {
     res.render('login', {title: 'Login', 'layout': false});
 });
 
+router.post('/', function (req, res, next) {
+    console.log(req.body.email);
+    console.log(req.body.password);
+    res.render('login', {title: 'Login', 'layout': false});
+});
+
 module.exports = router;
