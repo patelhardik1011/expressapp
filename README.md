@@ -1,9 +1,11 @@
-# expressapp
-For Learning Express Js with Node Js
+#Steps for start Learning Application
 
-#Steps
+  - npm install
+  - npm start
 
-1. 	Install Node.Js and npm install
-2. 	Install Express Js
-3. 	
+# Features!
 
+  - Handelbar js integration (https://handlebarsjs.com)
+  - Custom handelbar helper demo
+  - Layout demo
+  - Routing demo
