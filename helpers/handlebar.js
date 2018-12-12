@@ -8,7 +8,7 @@ module.exports = {
          * @param  {string}
          * @return {null|void}
          */
-        debug: function(data) {
+        debug: function (data) {
             console.log(data);
         }
     }
