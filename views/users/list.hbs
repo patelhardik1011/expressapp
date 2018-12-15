@@ -1,0 +1,51 @@
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Users</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Country</th>
+                            <th>Postcode</th>
+                            <th>Phone No</th>
+                            <th>Status</th>
+                        </tr>
+                        {{#if users}}
+                        {{#each users}}
+                        <tr>
+                            <td>{{this.first_name}} {{this.last_name}}</td>
+                            <td>{{this.email}}</td>
+                            <td>{{this.street_1 }} {{this.street_2}}</td>
+                            <td>{{this.city}}</td>
+                            <td>{{this.country}}</td>
+                            <td>{{this.postcode}}</td>
+                            <td>{{this.phone_no}}</td>
+                            <td>{{this.status}}</td>
+                        </tr>
+                        {{/each}}
+                        {{else}}
+                        <tr>
+                            <td colspan="9">No Users Record found</td>
+                        </tr>
+                        {{/if}}
+                    </table>
+                </div>
+                {{#if pages}}
+                <div class="box-footer clearfix">
+                    <ul class="pagination pagination-sm no-margin pull-right">
+                        {{{pagination pages page}}}
+                    </ul>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

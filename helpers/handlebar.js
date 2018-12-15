@@ -10,6 +10,17 @@ module.exports = {
          */
         debug: function (data) {
             console.log(data);
+        },
+        pagination: function (pages, page) {
+            let pagination = '';
+            for (i = 1; i <= pages; i++) {
+                if (i === page) {
+                    pagination += '<li class="active"><a href="#">' + i + '</a></li>';
+                } else {
+                    pagination += '<li><a href="/users?page=' + i + '">' + i + '</a></li>';
+                }
+            }
+            return pagination;
         }
     }
 };
