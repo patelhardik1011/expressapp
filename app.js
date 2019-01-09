@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var exphbs = require('express-handlebars');
+var bodyParser = require('body-parser');
+var session = require('express-session');
+var flash = require('connect-flash');
 
 var app = express();
 
@@ -15,10 +18,17 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+    cookie: {maxAge: 60000},
+    saveUninitialized: true,
+    resave: 'true',
+    secret: 'DGST%$#$SGgs657'
+}));
+app.use(flash());
 
 require("./routing/router")(app);
 

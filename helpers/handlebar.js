@@ -11,16 +11,23 @@ module.exports = {
         debug: function (data) {
             console.log(data);
         },
-        pagination: function (pages, page) {
+        pagination: function (pages, page, pageUrl) {
             let pagination = '';
+            console.log(pageUrl);
             for (i = 1; i <= pages; i++) {
-                if (i === page) {
+                if (i == page) {
                     pagination += '<li class="active"><a href="#">' + i + '</a></li>';
                 } else {
-                    pagination += '<li><a href="/users?page=' + i + '">' + i + '</a></li>';
+                    pagination += '<li><a href="/' + pageUrl + '?page=' + i + '">' + i + '</a></li>';
                 }
             }
             return pagination;
+        },
+        statusFunc: function (status) {
+            return (status) ? 'Active' : 'In Active';
+        },
+        selectOptions: function (selected, options) {
+            return options.fn(this).replace(new RegExp(' value=\"' + selected + '\"'), '$& selected="selected"');
         }
     }
 };

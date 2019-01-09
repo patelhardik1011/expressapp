@@ -1,0 +1,108 @@
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3 class="box-title">Create User</h3>
+                        </div>
+                        <div class="col-md-3 rightalign">
+                            <a href="/users" class="btn btn-primary">Back to User</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal" method="post">
+                    <div class="box-body">
+                        {{#if message}}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-error">{{message}}</div>
+                            </div>
+                        </div>
+                        {{/if}}
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-2 control-label">First Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-sm-2 control-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="street1" class="col-sm-2 control-label">Street 1</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="street1" class="form-control" id="street1" placeholder="Street 1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="street2" class="col-sm-2 control-label">Street 2</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="street2" class="form-control" id="street2" placeholder="Street 2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="city" class="col-sm-2 control-label">City</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="country" class="col-sm-2 control-label">Country</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="country" class="form-control" id="country" placeholder="Country">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode" class="col-sm-2 control-label">PostCode</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="postcode" class="form-control" id="postcode" placeholder="PostCode">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNo" class="col-sm-2 control-label">Phone No</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="phoneNo" class="form-control" id="phoneNo" placeholder="Phone No">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="status" class="col-sm-2 control-label">Status</label>
+                            <div class="col-sm-10">
+                                <select name="status" id="status" class="form-control">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="profilePic" class="col-sm-2 control-label">Profile Picture</label>
+                            <div class="col-sm-10">
+                                <input type="file" id="profilePic" name="profilePic">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button type="reset" class="btn btn-default">Reset</button>
+                        <button type="submit" class="btn btn-info pull-right">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
